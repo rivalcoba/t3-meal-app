@@ -1,5 +1,5 @@
 // Images
-import hero from "../assets/images/food-bkg.jpg";
+import hero from "../assets/images/food-bkg-4.jpg";
 export default () => {
   console.log('home.js');
   // Hero page
