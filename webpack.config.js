@@ -15,6 +15,16 @@ module.exports = {
       filename: "index.html",
       template: "./src/index.html",
     }),
+    new HtmlWebpackPlugin({
+      title: "Ingredients",
+      filename: "ingredients.html",
+      template: "./src/views/ingredients.html",
+    }),
+    new HtmlWebpackPlugin({
+      title: "Results",
+      filename: "results.html",
+      template: "./src/views/results.html",
+    }),
   ],
   devServer: {
     static: {
