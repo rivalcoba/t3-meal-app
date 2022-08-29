@@ -34,9 +34,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-        // More information here https://webpack.js.org/guides/asset-modules/
-        type: "asset",
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
     ]
   }
