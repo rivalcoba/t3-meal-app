@@ -1,4 +1,4 @@
-import '../assets/main.css'
+import '../assets/index.css'
 import heroImage from '../assets/img/food_test.jpg';
 // import ingredients from './ingredients.js';
 
