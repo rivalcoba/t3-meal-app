@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     bundle: "./src/js/index.js",
+    ingredients: "./src/js/ingredients.js",
+    results: "./src/js/results.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -14,16 +16,19 @@ module.exports = {
       title: "Meal App",
       filename: "index.html",
       template: "./src/index.html",
+      chunks: ['bundle'],
     }),
     new HtmlWebpackPlugin({
       title: "Ingredients",
       filename: "ingredients.html",
       template: "./src/views/ingredients.html",
+      chunks: ['ingredients'],
     }),
     new HtmlWebpackPlugin({
       title: "Results",
       filename: "results.html",
       template: "./src/views/results.html",
+      chunks: ['results'],
     }),
   ],
   devServer: {

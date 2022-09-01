@@ -1,0 +1,22 @@
+body {
+  background-color: white;
+}
+
+h1{
+  color: whitesmoke;
+}
+
+.header{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: rgb(9, 161, 148);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
