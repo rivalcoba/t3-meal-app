@@ -89,12 +89,18 @@ header button {
   transition: all .3s ease-in-out;
 }
 
+#randomButton:hover ~ .blurModal {
+  display: block;
+}
+
 /* PANDA */
 .panda {
   top: 150%;
   /* bottom: 0; */
   right: 15%;
   position: fixed;
+  transition: all .5s ease-in-out;
+
 }
 
 .randomRecipe {
@@ -124,11 +130,7 @@ header button {
   height: 300px; 
 }
 
-#randomButton:hover ~ .blurModal {
-  display: block;
-}
-
 #randomButton:hover ~ .panda {
   top: 70%;
-  transition: all .3s ease-out;
+  transition: all .5s ease-in-out;
 }
