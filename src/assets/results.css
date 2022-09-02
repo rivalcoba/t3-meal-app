@@ -119,6 +119,10 @@ header button {
   height: 300px; 
 }
 
+#randomButton:hover ~ .blurModal {
+  display: block;
+}
+
 #randomButton:hover ~ .panda {
   transition: all .3s ease-out;
   top: 70%;

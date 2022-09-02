@@ -25,7 +25,6 @@ const randomRecipeName = document.querySelector(".randomRecipeName");
 
 // Event listeners for randomButton
 randomButton.addEventListener("mouseover", () => {
-  blurModal.style.display = "block";
 
   // Gets new recipe every time the mouse is over randomButton
   getRandomRecipe().then(function (data) {
@@ -34,10 +33,6 @@ randomButton.addEventListener("mouseover", () => {
 
     randomRecipeName.textContent = name;
   });
-});
-
-randomButton.addEventListener("mouseout", () => {
-  blurModal.style.display = "none";
 });
 
 // API Helper Functions
