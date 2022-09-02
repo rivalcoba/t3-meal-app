@@ -89,18 +89,24 @@ header button {
   /* bottom: 0; */
   right: 15%;
   position: fixed;
-  transition: all .3s ease-out;
+  transition: all .3s ease-in-out;
 }
 
-.randomRecipeLink {
-  z-index: 1;
+.randomRecipe {
+  width: 265px;
+  height: 140px;
   position: absolute;
+  bottom: 295px;
+  right: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.randomRecipeName {
   color: #F5EFD7;
   font-size: 3rem;
   text-align: center;
-  text-decoration: none;
-  bottom: 330px;
-  right: 390px;
 }
 
 #rectangle {
