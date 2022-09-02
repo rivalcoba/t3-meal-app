@@ -14,17 +14,20 @@
     <div class="search-button">
       <button>🔎</button>
     </div>
+    <div class="random-button">
+      <button>🎲</button>
+    </div>
   </header>
   <section class="header">
     <section class="image">
       <img src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" alt="Minuatura">
     </section>
-    <section class="ingredients">
-      <h1>👌 strMeal</h1>
+    <section id="ingredients" >
+      <h1 id="recipe-title">strMeal</h1>
       <hr class="solid">
       <h2>Ingredientes</h2>
-      <div class="ingredients-list">
-        <ul>
+      <div id="ingredients-section">
+        <ul id="ingredients-list">
           <li>strMeasure1 strIngredient1</li>
           <li>strMeasure2 strIngredient2</li>
           <li>strMeasure3 strIngredient3</li>
@@ -39,5 +42,7 @@
       strInstructions
     </p>
   </section>
+  <!-- Import Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>

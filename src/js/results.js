@@ -1,2 +1,2 @@
-import '../assets/results.css'
+import "../assets/results.css";
 console.log("results JS 🤘");
