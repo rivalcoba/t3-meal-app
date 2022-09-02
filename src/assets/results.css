@@ -82,3 +82,38 @@ header button {
   height:100vh;
   width: 100%;
 }
+
+/* PANDA */
+.panda {
+  top: 150%;
+  /* bottom: 0; */
+  right: 15%;
+  position: fixed;
+  transition: all .3s ease-out;
+}
+
+.randomRecipeLink {
+  z-index: 1;
+  position: absolute;
+  color: #F5EFD7;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  bottom: 330px;
+  right: 390px;
+}
+
+#rectangle {
+  position: absolute;
+  bottom: 270px;
+  right: 290px;
+}
+
+#pandaImage {
+  height: 300px; 
+}
+
+#randomButton:hover ~ .panda {
+  transition: all .3s ease-out;
+  top: 70%;
+}
