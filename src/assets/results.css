@@ -110,15 +110,14 @@ header button {
   right: 15%;
   position: fixed;
   transition: all .5s ease-in-out;
-
 }
 
 .randomRecipe {
-  width: 265px;
-  height: 140px;
+  width: 300px;
+  height: 160px;
   position: absolute;
-  bottom: 295px;
-  right: 320px;
+  bottom: 300px;
+  right: 325px;
   display: flex;
   justify-content: center;
   align-items: center;
