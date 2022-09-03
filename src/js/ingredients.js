@@ -1,7 +1,6 @@
 import '../assets/ingredients.css'
 import getRecipe from './helpers/getRecipe.js'
 import loading from '../assets/img/loading.gif'
-console.log("Ingredients JS 🤘");
 
 let searchRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/search.php';
 const randomRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'
