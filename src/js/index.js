@@ -1,14 +1,21 @@
-import '../assets/index.css'
-import heroImage from '../assets/img/food_test.jpg';
+// Importamos estilos
+import '../assets/main.css'
 
-// Testing image
-let heroImageTag = document.getElementById('hero');
-heroImageTag.src = heroImage;
+// Importamos imágenes
+import backgroundMain from '../assets/img/background.svg';
+import principalMain from '../assets/img/imagen_principal.svg';
+import aleatorioIcon from "../assets/img/aleatorio_icon.png";
 
-// Testing ES6
-// Arrow function
-let sumOfTwoNumbers = (a, b) => a + b;
-console.log(sumOfTwoNumbers(10, 20)); // Output 30
+// Asignamos imágenes
+document.getElementById("backgroundMain").src = backgroundMain;
+document.getElementById("principalMain").src = principalMain;
+document.getElementById("aleatorioIcon").src = aleatorioIcon;
 
-// Testing Script
-console.log("Script index.js Funcionando");
+document.getElementById("searchForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Search");
+})
+
+document.getElementById("randomButton").addEventListener("click",(event) => {
+    window.location.href = "/ingredients.html";
+})
