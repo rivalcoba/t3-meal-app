@@ -17,5 +17,5 @@ document.getElementById("searchForm").addEventListener("submit", (event) => {
 })
 
 document.getElementById("randomButton").addEventListener("click",(event) => {
-    alert("Random");
+    window.location.href = "/ingredients.html";
 })
