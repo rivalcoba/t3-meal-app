@@ -2,7 +2,8 @@ import '../assets/ingredients.css'
 import getRecipe from './helpers/getRecipe.js'
 console.log("Ingredients JS 🤘");
 
-const urlApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+let searchRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/search.php';
+const randomRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'
 
 // Getting interface references
 const recipeTitle = document.getElementById("recipe-title");
@@ -11,9 +12,11 @@ const directionsParagraph = document.getElementById("directions-paragraph");
 const recipeThumbnail = document.getElementById("recipe-thumbnail");
 
 // Getting Search
-const search = window.location.search.substring(1).split("=")[1];
+const search = window.location.search;
+searchRecipeUrl = search && search.search("s") > 0 ? searchRecipeUrl + search : randomRecipeUrl;
 
-getRecipe(axios, urlApi + search).then(recipe => {
+
+getRecipe(axios, searchRecipeUrl).then(recipe => {
   // Escribiendo Titulo
   recipeTitle.innerHTML = `🌟 ${recipe.strMeal} 🌟`;
 
@@ -45,4 +48,8 @@ getRecipe(axios, urlApi + search).then(recipe => {
   // Escribiendo lista de instrucciones
   directionsParagraph.innerHTML = recipe.strInstructions;
 
+}, error => {
+  console.log("Receta no encontrada");
+  // Escribiendo Titulo
+  recipeTitle.innerHTML = `⚠ Receta no encontrada  ⚠`;
 });
