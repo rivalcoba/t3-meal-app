@@ -59,7 +59,6 @@ header button {
 } 
 
 #randomButton {
-  background: #CB803A;
   border-radius: 1rem;
   height: 90px;
   width: 90px;
@@ -69,11 +68,20 @@ header button {
   z-index: 1;
   border: 1px solid #CB803A;
   transition: all .3s ease-in-out;
+  background: url("../assets/img/arrow1.svg");
+  background-color: #CB803A;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 #randomButton:hover {
   box-shadow: 3px 3px rgba(203, 128, 58, .5);
-  background: none;
+  background: url("../assets/img/arrow2.svg");
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-color: #F5EFD7;
 }
 
 .blurModal {
