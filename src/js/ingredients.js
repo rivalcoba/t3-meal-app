@@ -7,13 +7,18 @@ const urlApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 // Getting interface references
 const recipeTitle = document.getElementById("recipe-title");
 const ingredientsList = document.getElementById("ingredients-list")
+const directionsParagraph = document.getElementById("directions-paragraph");
+const recipeThumbnail = document.getElementById("recipe-thumbnail");
 
 // Getting Search
 const search = window.location.search.substring(1).split("=")[1];
 
 getRecipe(axios, urlApi + search).then(recipe => {
-  // Asignando Titulo
+  // Escribiendo Titulo
   recipeTitle.innerHTML = `🌟 ${recipe.strMeal} 🌟`;
+
+  // Asignando imagen
+  recipeThumbnail.src = recipe.strMealThumb;
   
   // Asignando ingredientes y medidas
   const ingredients = []
@@ -34,6 +39,10 @@ getRecipe(axios, urlApi + search).then(recipe => {
     listItems += `<li>${measures[index]} ${ingredient}</li></br>`
   });
 
+  // Escribiendo lista de ingredientes
   ingredientsList.innerHTML = listItems;
+
+  // Escribiendo lista de instrucciones
+  directionsParagraph.innerHTML = recipe.strInstructions;
 
 });
