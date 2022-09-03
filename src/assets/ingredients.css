@@ -1,0 +1,23 @@
+body {
+  background-color: white;
+}
+
+h1{
+  color: rgb(51, 58, 31);
+}
+
+header{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: rgb(154, 174, 64);
+}
+
+img {
+  width: 20rem;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
