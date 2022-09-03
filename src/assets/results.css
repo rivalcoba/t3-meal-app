@@ -46,18 +46,20 @@ header button {
 }
 
 .container {
-  display: grid;
-  gap: 5rem;
-  grid-template-columns: repeat(2, 1fr);
-  align-self: center;
-  align-items: center;
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  /* background-color: red; */
 }
 
 .recipe-item {
   border: 0px solid #CB803A;
   border-radius: 12px;
-  height: 150px;
-  width: 400px ; 
+  height: fit-content;
+  width: 560px; 
+  margin: 12px 12px;
 } 
 
 #randomButton {
@@ -190,7 +192,7 @@ img {
   height: 172px;
   border-radius: 12px;
   border: 2px solid #cb803a;
-  margin: 91px;
+  margin: 16px 24px 16px 91px;
   padding: 16px 36px 16px 113px;
   z-index: -1;
   display: flex;
