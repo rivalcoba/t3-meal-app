@@ -2,18 +2,26 @@ import '../assets/ingredients.css'
 import getRecipe from './helpers/getRecipe.js'
 console.log("Ingredients JS 🤘");
 
-const urlApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+let searchRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/search.php';
+const randomRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'
 
 // Getting interface references
 const recipeTitle = document.getElementById("recipe-title");
 const ingredientsList = document.getElementById("ingredients-list")
+const directionsParagraph = document.getElementById("directions-paragraph");
+const recipeThumbnail = document.getElementById("recipe-thumbnail");
 
 // Getting Search
-const search = window.location.search.substring(1).split("=")[1];
+const search = window.location.search;
+searchRecipeUrl = search && search.search("s") > 0 ? searchRecipeUrl + search : randomRecipeUrl;
 
-getRecipe(axios, urlApi + search).then(recipe => {
-  // Asignando Titulo
+
+getRecipe(axios, searchRecipeUrl).then(recipe => {
+  // Escribiendo Titulo
   recipeTitle.innerHTML = `🌟 ${recipe.strMeal} 🌟`;
+
+  // Asignando imagen
+  recipeThumbnail.src = recipe.strMealThumb;
   
   // Asignando ingredientes y medidas
   const ingredients = []
@@ -34,6 +42,14 @@ getRecipe(axios, urlApi + search).then(recipe => {
     listItems += `<li>${measures[index]} ${ingredient}</li></br>`
   });
 
+  // Escribiendo lista de ingredientes
   ingredientsList.innerHTML = listItems;
 
+  // Escribiendo lista de instrucciones
+  directionsParagraph.innerHTML = recipe.strInstructions;
+
+}, error => {
+  console.log("Receta no encontrada");
+  // Escribiendo Titulo
+  recipeTitle.innerHTML = `⚠ Receta no encontrada  ⚠`;
 });
