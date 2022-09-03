@@ -1,10 +1,21 @@
+// Importamos estilos
 import '../assets/main.css'
+
+// Importamos imágenes
 import backgroundMain from '../assets/img/background.svg';
 import principalMain from '../assets/img/imagen_principal.svg';
+import aleatorioIcon from "../assets/img/aleatorio_icon.png";
 
-document.getElementById('backgroundMain').style.backgroundImage = `url(${backgroundMain})`;
-/* document.getElementById('principalMain') */
+// Asignamos imágenes
+document.getElementById("backgroundMain").src = backgroundMain;
+document.getElementById("principalMain").src = principalMain;
+document.getElementById("aleatorioIcon").src = aleatorioIcon;
 
-// document.body.style.background = `url(${backgroundMain})`
+document.getElementById("searchForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Search");
+})
 
-console.log(principalMain)
+document.getElementById("randomButton").addEventListener("click",(event) => {
+    alert("Random");
+})
