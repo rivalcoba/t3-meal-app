@@ -41,6 +41,8 @@ header button {
   background: none;
   height: 32px;
   width: 32px;
+  background: url("../assets/img/search.svg");
+  background-position: center;
 }
 
 .container {
