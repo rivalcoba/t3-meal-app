@@ -5,7 +5,8 @@ module.exports = {
   entry: {
     bundle: "./src/js/index.js",
     ingredients: "./src/js/ingredients.js",
-    results: "./src/js/results.js"
+    results: "./src/js/results.js",
+    main: "./src/js/main.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -29,6 +30,12 @@ module.exports = {
       filename: "results.html",
       template: "./src/views/results.html",
       chunks: ['results'],
+    }),
+    new HtmlWebpackPlugin({
+      title: "Main",
+      filename: "main.html",
+      template: "./src/views/main.html",
+      chunks: ['main'],
     }),
   ],
   devServer: {
