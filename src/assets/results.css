@@ -53,7 +53,7 @@ header button {
 }
 
 .recipe-item {
-  border: 2px solid #CB803A;
+  border: 0px solid #CB803A;
   border-radius: 12px;
   height: 150px;
   width: 400px ; 
@@ -81,4 +81,82 @@ header button {
   left:0;
   height:100vh;
   width: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: 'Alata', 'Arial';
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: rgb(31, 31, 31);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imgCard {
+  width: 192px;
+  height: 192px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  filter: drop-shadow(4px 4px 2px rgba(128, 80, 36, 0.64));
+}
+
+.descriptionCard {
+  box-sizing: border-box;
+  position: absolute;
+  width: 458px;
+  height: 172px;
+  border-radius: 12px;
+  border: 2px solid #cb803a;
+  margin: 91px;
+  padding: 16px 36px 16px 113px;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nameMealCard, .categoryMealCard, .numberIngredientsCard{
+  padding: 0;
+  margin: 0;
+}
+
+.nameMealCard{
+  font-family: 'Inter';
+  color: #CB803A;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.categoryMealCard{
+  font-size: 16px;
+  font-weight: 400;
+  color: #CB803A;
+}
+
+.numberIngredientsCard{
+  font-size: 12px;
+  font-weight: 400;
+  color: #CB803A;
 }
