@@ -9,26 +9,15 @@
 </head>
 
 <body>
-  <main>
-    <img id="backgroundMain" />
-    <header class="header">
-      <ul>
-        <li class="active_link">HOME</li>
-        <li>CATEGORIAS</li>
-      </ul>
-    </header>
-    <section id="search" >
-      <h1>¿De Qué Tienes <br> Hambre?</h1>
-      <form id="searchForm">
-        <input type="text" />
-        <button type="submit">BUSCAR</button>
-        <button type="button" id="randomButton">
-          <img id="aleatorioIcon" />
-         </button>
-      </form>
-    </section>
-    <img id="principalMain">
-  </main>
+  <div class="mainContainer">
+    <input type="search" name="inputMeal" id="inputMeal" placeholder="¿Que vamos a cocinar hoy?">
+    <input type="button" value="search" id="startSearchBtn">
+    <div class="sugContainer">
+      <!-- Aquí van las sugerencias de búsqueda -->
+    </div>
+  </div>
+
+  <script src="/src/js/index.js"></script>
 </body>
 
 </html>
