@@ -7,9 +7,37 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="header">
-    <h1>Ingredientes 👌</h1>
-  </div>
-  <p>🚧 Under Construction!!! 🚧</p>
+  <header>
+    <div class="search">
+      <input type="text" name="" id="">
+    </div>
+    <div class="search-button">
+      <button>🔎</button>
+    </div>
+    <div class="random-button">
+      <button>🎲</button>
+    </div>
+  </header>
+  <section class="header">
+    <section class="image">
+      <img id="recipe-thumbnail" src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" alt="Minuatura">
+    </section>
+    <section id="ingredients" >
+      <h1 id="recipe-title"></h1>
+      <hr class="solid">
+      <h2>Ingredients</h2>
+      <div id="ingredients-section">
+        <ul id="ingredients-list">
+        </ul>
+      </div>
+    </section>
+  </section>
+  <section id="directions-section">
+    <h2>Directions</h2>
+    <p id="directions-paragraph">
+    </p>
+  </section>
+  <!-- Import Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>
