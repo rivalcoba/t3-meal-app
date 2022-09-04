@@ -23,15 +23,18 @@ const recipeContainer = document.querySelector(".container");
 // randomRecipeName
 const randomRecipeName = document.querySelector(".randomRecipeName");
 
+// recipeInput
+const recipeInput = document.querySelector("#recipeInput");
+
 // Event listeners for randomButton
 randomButton.addEventListener("mouseover", () => {
-
   // Gets new recipe every time the mouse is over randomButton
   getRandomRecipe().then(function (data) {
     console.log(data);
     const name = getRecipeName(data);
 
     randomRecipeName.textContent = name;
+    updateRecipeInput(name);
   });
 });
 
@@ -47,3 +50,6 @@ function getRecipeName(data) {
   return data.meals[0].strMeal;
 }
 
+function updateRecipeInput(recipe) {
+  recipeInput.value = recipe;
+}
