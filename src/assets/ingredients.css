@@ -1,8 +1,8 @@
-/* * {
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  border: 0;
-  box-sizing: content-box;
-} */
+}
 
 body {
   background-color: white;
@@ -30,12 +30,32 @@ ul > li {
   list-style: none;
 }
 
-header{
-  display:flex;
-  justify-content: center;
+header {
+  min-height: 10%;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  height: 100px;
-  background-color: rgb(154, 174, 64);
+  background: #F5EFD7;
+  padding-right: 10%;
+  gap: 10px;
+}
+
+header input {
+  height: 32px;
+  width: 302px;
+  border: 2px solid #CB803A;
+  border-radius: 8px;
+  background: none;
+}
+
+header button {
+  border: 2px solid #CB803A;
+  border-radius: 8px;
+  background: none;
+  height: 32px;
+  width: 32px;
 }
 
 
