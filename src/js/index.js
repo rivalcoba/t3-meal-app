@@ -42,12 +42,13 @@ function traerSugerencias(terminoBusqueda) {
     .then((response) => response.json())
     .then((data) => {
       limpiarArray();
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < data.meals.length; i++) {
         //   console.log(data.meals[i].idMeal);
         //   console.log(data.meals[i].strMeal);
         
         llenarArray(data.meals[i].strMeal, data.meals[i].idMeal, obtenerNumeroIngredientes(data.meals[i].strMeal));
       }
+      console.log(sugerenciasArray);
     })
     .catch(function (error) {
       console.log("Error en la API");
