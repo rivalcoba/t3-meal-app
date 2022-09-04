@@ -1,9 +1,21 @@
-import '../assets/index.css'
-import heroImage from '../assets/img/food_test.jpg';
+import "../assets/index.css";
+import backgroundMain from "../assets/img/background.svg";
+import principalMain from "../assets/img/imagen_principal.svg";
+import aleatorioIcon from "../assets/img/aleatorio_icon.png";
 
-// Testing image
-let heroImageTag = document.getElementById('hero');
-heroImageTag.src = heroImage;
+document.getElementById("backgroundMain").src = backgroundMain;
+document.getElementById("principalMain").src = principalMain;
+document.getElementById("aleatorioIcon").src = aleatorioIcon;
+document.getElementById("aleatorioIcon").style.height = "50%";
 
-// Testing Script
-console.log("Script index.js Funcionando");
+const form = document.getElementById("searchForm");
+const randomButton = document.getElementById("randomButton");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  alert("Search");
+});
+
+randomButton.addEventListener("click", (event) => {
+  alert("Random");
+});

@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meal App</title>
-</head>
-<body>
-  <div class="header">
-    <h1>Webpack Funcionado 👌</h1>
-  </div>
-  <img id="hero">
-  <p><a href="/ingredients.html">Ingredientes</a></p>
-  <p><a href="/results.html">Resultados</a></p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal App</title>
+  </head>
+
+  <body>
+    <main>
+      <img id="backgroundMain" />
+      <header class="header">
+        <ul>
+          <li class="active_link">HOME</li>
+          <li>CATEGORIAS</li>
+        </ul>
+      </header>
+      <section id="search">
+        <h1>¿De Qué Tienes <br />Hambre?</h1>
+        <form id="searchForm">
+          <input type="text" />
+          <button type="submit">BUSCAR</button>
+          <button type="button" id="randomButton"><img id="aleatorioIcon" /></button>
+        </form>
+      </section>
+      <img id="principalMain" />
+    </main>
+  </body>
 </html>
