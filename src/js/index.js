@@ -1,16 +1,6 @@
 // Importamos estilos
 import '../assets/index.css'
 
-// Importamos imágenes
-import backgroundMain from '../assets/img/background.svg';
-import principalMain from '../assets/img/imagen_principal.svg';
-import aleatorioIcon from "../assets/img/aleatorio_icon.png";
-
-// Asignamos imágenes
-document.getElementById("backgroundMain").src = backgroundMain;
-document.getElementById("principalMain").src = principalMain;
-document.getElementById("aleatorioIcon").src = aleatorioIcon;
-
 // Leer la entrada del usuario
 
 const startSearch = document.querySelector("#startSearchBtn");
