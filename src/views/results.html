@@ -1,15 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>MealApp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/src/assets/card.css"> -->
+  <!-- <link rel="stylesheet" href="/src/assets/results.css"> -->
 </head>
+
 <body>
-  <div class="header">
-    <h1>Resultados 👌</h1>
+  <header>
+    <!-- Search Box -->
+    <input type="text">
+    <button></button>
+  </header>
+  
+  <section class="container">
+    <section class="recipe-item">
+      <!-- Tarjeta de receta en galeria de resultados -->
+      <div id="mealCard" class="card">
+        <div id="mealThumbnail" class="imgCard">
+          <img src="https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg" alt="imagen receta">
+        </div>
+        <div class="descriptionCard">
+          <div class="mainDescriptionCard">
+            <h3 id="nameMeal" class="nameMealCard">
+              Chivito Uruguayo
+            </h3>
+            <h4 id="categoryMeal" class="categoryMealCard">
+              Beef
+            </h4>
+          </div>
+          <div class="ingredientsDescrptionCard">
+            <h5 id="numberOfIngredients" class="numberIngredientsCard">
+              10 ingredientes
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recipe-item">
+      <!-- Tarjeta de receta en galeria de resultados -->
+      <div id="mealCard" class="card">
+        <div id="mealThumbnail" class="imgCard">
+          <img src="https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg" alt="imagen receta">
+        </div>
+        <div class="descriptionCard">
+          <div class="mainDescriptionCard">
+            <h3 id="nameMeal" class="nameMealCard">
+              Chivito Uruguayo
+            </h3>
+            <h4 id="categoryMeal" class="categoryMealCard">
+              Beef
+            </h4>
+          </div>
+          <div class="ingredientsDescrptionCard">
+            <h5 id="numberOfIngredients" class="numberIngredientsCard">
+              10 ingredientes
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recipe-item">
+      <!-- Tarjeta de receta en galeria de resultados -->
+      <div id="mealCard" class="card">
+        <div id="mealThumbnail" class="imgCard">
+          <img src="https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg" alt="imagen receta">
+        </div>
+        <div class="descriptionCard">
+          <div class="mainDescriptionCard">
+            <h3 id="nameMeal" class="nameMealCard">
+              Chivito Uruguayo
+            </h3>
+            <h4 id="categoryMeal" class="categoryMealCard">
+              Beef
+            </h4>
+          </div>
+          <div class="ingredientsDescrptionCard">
+            <h5 id="numberOfIngredients" class="numberIngredientsCard">
+              10 ingredientes
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recipe-item">
+      <!-- Tarjeta de receta en galeria de resultados -->
+      <div id="mealCard" class="card">
+        <div id="mealThumbnail" class="imgCard">
+          <img src="https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg" alt="imagen receta">
+        </div>
+        <div class="descriptionCard">
+          <div class="mainDescriptionCard">
+            <h3 id="nameMeal" class="nameMealCard">
+              Chivito Uruguayo
+            </h3>
+            <h4 id="categoryMeal" class="categoryMealCard">
+              Beef
+            </h4>
+          </div>
+          <div class="ingredientsDescrptionCard">
+            <h5 id="numberOfIngredients" class="numberIngredientsCard">
+              10 ingredientes
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recipe-item">
+      <!-- Tarjeta de receta en galeria de resultados -->
+      <div id="mealCard" class="card">
+        <div id="mealThumbnail" class="imgCard">
+          <img src="https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg" alt="imagen receta">
+        </div>
+        <div class="descriptionCard">
+          <div class="mainDescriptionCard">
+            <h3 id="nameMeal" class="nameMealCard">
+              Chivito Uruguayo
+            </h3>
+            <h4 id="categoryMeal" class="categoryMealCard">
+              Beef
+            </h4>
+          </div>
+          <div class="ingredientsDescrptionCard">
+            <h5 id="numberOfIngredients" class="numberIngredientsCard">
+              10 ingredientes
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recipe-item">
+      <!-- Tarjeta de receta en galeria de resultados -->
+      <div id="mealCard" class="card">
+        <div id="mealThumbnail" class="imgCard">
+          <img src="https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg" alt="imagen receta">
+        </div>
+        <div class="descriptionCard">
+          <div class="mainDescriptionCard">
+            <h3 id="nameMeal" class="nameMealCard">
+              Chivito Uruguayo
+            </h3>
+            <h4 id="categoryMeal" class="categoryMealCard">
+              Beef
+            </h4>
+          </div>
+          <div class="ingredientsDescrptionCard">
+            <h5 id="numberOfIngredients" class="numberIngredientsCard">
+              10 ingredientes
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <button id="randomButton"></button>
+
+  <section class="blurModal"></section>
+
+  <div class="panda">
+    <img id="rectangle" alt="">
+    <img id="pandaImage" alt="">
+    <section class="randomRecipe">
+      <p class="randomRecipeName"></p>
+    </section>
   </div>
-  <p>🚧 Under Construction!!! 🚧</p>
+
 </body>
+
 </html>

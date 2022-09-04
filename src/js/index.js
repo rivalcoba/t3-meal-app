@@ -1,5 +1,5 @@
 // Importamos estilos
-import '../assets/main.css'
+import '../assets/index.css'
 
 // Importamos imágenes
 import backgroundMain from '../assets/img/background.svg';
