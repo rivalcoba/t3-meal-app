@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: rgb(247, 240, 223);
 }
 
 h1{
@@ -15,12 +15,13 @@ h1{
 
 h2{
   font-size: small;
+  padding: 1rem;
 }
 
 ul{
   display: flex;
   flex-flow: column wrap;
-  height: 14rem;
+  height: 11.9rem;
 }
 
 ul > li {
@@ -28,6 +29,7 @@ ul > li {
   float: left;
   clear: left;
   list-style: none;
+  padding-right: 6%;
 }
 
 header {
@@ -58,13 +60,20 @@ header button {
   width: 32px;
 }
 
+header button:hover{
+  background: #d89c64;
+}
 
-.header {
+section.header {
   display:flex;
+}
+section.header > div {
+  padding: 1%;
 }
 
 img {
-  height: 20rem;
+  height: 15rem;
+  border-radius: 5%;
 }
 
 hr.solid {
@@ -83,4 +92,8 @@ header > div{
   border-width: 50px;
   border: rgb(255, 0, 0);
   background-color: red;
+}
+
+section#directions-section p {
+  padding: 1rem;
 }
