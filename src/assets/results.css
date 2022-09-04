@@ -91,6 +91,10 @@ header button {
   background-color: #F5EFD7;
 }
 
+#randomButton:active {
+  box-shadow: 1px 1px rgba(203, 128, 58, .5);
+}
+
 .blurModal {
   display: none;
   position: fixed;
