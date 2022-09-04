@@ -70,6 +70,17 @@ body {
   width: 740px;
   margin: 24px;
   padding: 8px;
+  color: #CB803A;
+}
+
+.sugerencia{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 740px;
+  margin: 24px;
+  padding: 8px;
   border: 1px solid #f09540;
   border-radius: 12px;
 

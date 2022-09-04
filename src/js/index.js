@@ -30,6 +30,7 @@ function llenarArray(nameMeal, idMeal) {
     idMeal: idMeal,
   });
   console.log(sugerenciasArray);
+  crearCardSugerencia(nameMeal, idMeal);
 }
 
 function traerSugerencias(terminoBusqueda) {
@@ -57,4 +58,38 @@ function imprimirSugerencia(terminoBusqueda) {
     sugContainer.style.display = "flex";
     traerSugerencias(terminoBusqueda);
   }
+}
+
+function crearCardSugerencia (nMeal, nIngredientes){
+  const sugContainer = document.querySelector('.sugContainer');
+
+  const sugerencia = document.createElement('div');
+  sugerencia.className = 'sugerencia';
+  
+  const nameMeal = document.createElement('h3');
+  nameMeal.className = 'nameMeal';
+
+  const ingredientes = document.createElement('div');
+  ingredientes.className = 'ingredientes';
+
+  const numeroIngredientes = document.createElement('p');
+  numeroIngredientes.className = 'numeroIngredientes';
+
+  const p = document.createElement('p');
+
+  sugContainer.appendChild(sugerencia);
+  sugerencia.appendChild(nameMeal);
+  sugerencia.appendChild(ingredientes);
+  ingredientes.appendChild(numeroIngredientes);
+  ingredientes.appendChild(p);
+
+  document.querySelector(".nameMeal").textContent = nMeal;
+  document.querySelector("p").textContent = nIngredientes;
+
+
+
+}
+
+function obtenerNumeroIngredientes() {
+
 }
