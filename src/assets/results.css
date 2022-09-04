@@ -1,17 +1,166 @@
-body {
-  background-color: white;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-h1{
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #F5EFD7;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Alata', 'Arial';
+}
+
+header {
+  min-height: 10%;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background: #F5EFD7;
+  padding-right: 10%;
+  gap: 10px;
+}
+
+header input {
+  height: 32px;
+  width: 302px;
+  border: 2px solid #CB803A;
+  border-radius: 8px;
+  background: none;
+}
+
+header button {
+  border: 2px solid #CB803A;
+  border-radius: 8px;
+  background: none;
+  height: 32px;
+  width: 32px;
+  background: url("../assets/img/search.svg");
+  background-position: center;
+}
+
+.container {
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  /* background-color: red; */
+  background: #F5EFD7;
+}
+
+.recipe-item {
+  border: 0px solid #CB803A;
+  border-radius: 12px;
+  height: fit-content;
+  width: 560px; 
+  margin: 12px 12px;
+  z-index: 1;
+} 
+
+#randomButton {
+  border-radius: 1rem;
+  height: 90px;
+  width: 90px;
+  position: fixed;
+  bottom: 5%;
+  right: 5%; 
+  z-index: 3;
+  border: 1px solid #CB803A;
+  transition: all .3s ease-in-out;
+  background: url("../assets/img/arrow1.svg");
+  background-color: #CB803A;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#randomButton:hover {
+  box-shadow: 3px 3px rgba(203, 128, 58, .5);
+  background: url("../assets/img/arrow2.svg");
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-color: #F5EFD7;
+}
+
+.blurModal {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  height:100vh;
+  width: 100%;
+  transition: all .3s ease-in-out;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+}
+
+#randomButton:hover ~ .blurModal {
+  display: block;
+}
+
+/* PANDA */
+.panda {
+  top: 150%;
+  /* bottom: 0; */
+  right: 15%;
+  position: fixed;
+  transition: all .5s ease-in-out;
+  z-index: 3;
+}
+
+.randomRecipe {
+  width: 270px;
+  height: 140px;
+  position: absolute;
+  bottom: 300px;
+  right: 325px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.randomRecipeName {
+  color: #F5EFD7;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#rectangle {
+  position: absolute;
+  bottom: 270px;
+  right: 290px;
+}
+
+#pandaImage {
+  height: 300px; 
+}
+
+#randomButton:hover ~ .panda {
+  top: 70%;
+  transition: all .5s ease-in-out;
+}
+
+h1 {
   color: whitesmoke;
 }
 
-.header{
-  display:flex;
+.header {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
-  background-color: rgb(9, 161, 148);
+  background-color: rgb(31, 31, 31);
 }
 
 img {
@@ -19,4 +168,58 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imgCard {
+  width: 192px;
+  height: 192px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  filter: drop-shadow(4px 4px 2px rgba(128, 80, 36, 0.64));
+}
+
+.descriptionCard {
+  box-sizing: border-box;
+  position: absolute;
+  width: 458px;
+  height: 172px;
+  border-radius: 12px;
+  border: 2px solid #cb803a;
+  margin: 16px 24px 16px 91px;
+  padding: 16px 36px 16px 113px;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nameMealCard, .categoryMealCard, .numberIngredientsCard{
+  padding: 0;
+  margin: 0;
+}
+
+.nameMealCard{
+  font-family: 'Inter';
+  color: #CB803A;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.categoryMealCard{
+  font-size: 16px;
+  font-weight: 400;
+  color: #CB803A;
+}
+
+.numberIngredientsCard{
+  font-size: 12px;
+  font-weight: 400;
+  color: #CB803A;
 }

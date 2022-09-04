@@ -4,36 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
   <header>
-    <div class="search">
-      <input type="text" name="" id="">
-    </div>
-    <div class="search-button">
-      <button>🔎</button>
-    </div>
-    <div class="random-button">
-      <button>🎲</button>
-    </div>
+    <input type="text" name="" id="">
+    <button><span class="material-icons md-24">search</span></button>
+    <button onclick="window.location.href='/ingredients.html'"><span class="material-icons md-24">shuffle</span></button>
   </header>
   <section class="header">
-    <section class="image">
+    <div id="image-section">
       <img id="recipe-thumbnail" src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" alt="Minuatura">
-    </section>
-    <section id="ingredients" >
+    </div>
+    <div id="ingredients-section" >
       <h1 id="recipe-title"></h1>
       <hr class="solid">
-      <h2>Ingredients</h2>
+      <h2>INGREDIENTS</h2>
       <div id="ingredients-section">
         <ul id="ingredients-list">
         </ul>
       </div>
-    </section>
+    </div>
   </section>
   <section id="directions-section">
-    <h2>Directions</h2>
+    <h2>DIRECTIONS</h2>
     <p id="directions-paragraph">
     </p>
   </section>

@@ -1,6 +1,6 @@
 import '../assets/ingredients.css'
 import getRecipe from './helpers/getRecipe.js'
-console.log("Ingredients JS 🤘");
+import loading from '../assets/img/loading.gif'
 
 let searchRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/search.php';
 const randomRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'
@@ -10,6 +10,7 @@ const recipeTitle = document.getElementById("recipe-title");
 const ingredientsList = document.getElementById("ingredients-list")
 const directionsParagraph = document.getElementById("directions-paragraph");
 const recipeThumbnail = document.getElementById("recipe-thumbnail");
+recipeThumbnail.src = loading;
 
 // Getting Search
 const search = window.location.search;
