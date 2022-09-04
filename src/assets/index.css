@@ -1,3 +1,93 @@
-body{
-  font-family: 'Alata';
+* {
+  box-sizing: border-box;
 }
+body {
+  height: 100vh;
+  font-family: "Alata";
+  background-color: #F5EFD7;
+}
+
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar{
+  display: flex;
+  align-items: center;
+}
+
+#inputMeal {
+  height: 84px;
+  width: 740px;
+  padding: 24px;
+  border: 2px solid #cb803a;
+  border-radius: 12px;
+  background-color: #F5EFD7;
+  font-size: 32px;
+  color: rgba(203, 128, 58, 0.36);
+}
+
+#startSearchBtn {
+  z-index: 3;
+  height: 84px;
+  width: 84px;
+  border: 2px solid #cb803a;
+  border-radius: 12px;
+  margin-left: 24px;
+  
+
+  transition: all .3s ease-in-out;
+
+  background-color: #F5EFD7;
+  background: url("../assets/img/search.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#startSearchBtn:hover {
+  box-shadow: 3px 3px rgba(176, 83, 11, 0.48);;
+  background: url("../assets/img/search_light.svg");
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-color: #CB803A;
+}
+
+#startSearchBtn:active {
+  box-shadow: 1px 1px rgba(176, 83, 11, 0.48);;
+}
+
+.sugContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 740px;
+  margin: 24px;
+  padding: 8px;
+  border: 1px solid #f09540;
+  border-radius: 12px;
+
+  color: #CB803A;
+}
+
+.nameMeal{
+  margin: 0 16px;
+}
+
+.numeroIngredientes{
+
+  margin: 8px 16px;
+  display: inline;  
+}
+p{
+  margin: 8px 16px;
+  display: inline;  
+}
+
+
