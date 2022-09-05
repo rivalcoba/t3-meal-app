@@ -83,7 +83,7 @@ function createCards() {
   let resultCards = ""
   sugerenciasArray.forEach(item => {
     resultCards = resultCards.concat(`
-    <div class="sugerencia">
+    <div class="sugerencia" onclick='window.location.href="/ingredients.html?s=${item.nameMeal}"'>
       <h3 class="nameMeal1">${item.nameMeal}</h3>
         <div class="ingredientes">
           <p class="numeroIngredientes1">${item.noIngredientes}</p>
