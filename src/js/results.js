@@ -19,7 +19,7 @@ stringSearch.addEventListener("input", function leerBusqueda(event) {
 });
 
 function imprimirSugerencia(terminoBusqueda) {
-  if (terminoBusqueda.length < 2) {
+  if (terminoBusqueda.length < 0) {
     sugContainer.style.display = "none";
   } else {
     sugContainer.style.display = "flex";
