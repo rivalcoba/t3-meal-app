@@ -31,8 +31,6 @@ function llenarArray(nameMeal, idMeal, noIngredientes) {
     idMeal: idMeal,
     noIngredientes: noIngredientes
   });
-  console.log(nameMeal);
-
 }
 
 function traerSugerencias(terminoBusqueda) {
@@ -42,16 +40,19 @@ function traerSugerencias(terminoBusqueda) {
     .then((response) => response.json())
     .then((data) => {
       limpiarArray();
-      for (let i = 0; i < data.meals.length; i++) {
-        //   console.log(data.meals[i].idMeal);
-        //   console.log(data.meals[i].strMeal);
-        
-        llenarArray(data.meals[i].strMeal, data.meals[i].idMeal, obtenerNumeroIngredientes(data.meals[i].strMeal));
+      for (let i = 0; i < data.meals.length && i < 4; i++) {
+        let meal = data.meals[i].strMeal;
+        let id = data.meals[i].idMeal;
+        let ingredientsCount = obtenerNumeroIngredientes(data.meals[i])
+        console.log("✍ Llenara Ingredientes...");
+        llenarArray(meal, id, ingredientsCount);
       }
+      // Crear Cards
+      createCards();
       console.log(sugerenciasArray);
     })
     .catch(function (error) {
-      console.log("Error en la API");
+      console.log(error);
     });
 }
 
@@ -64,9 +65,59 @@ function imprimirSugerencia(terminoBusqueda) {
   }
 }
 
-function obtenerNumeroIngredientes(idMeal) {
-  //Recibir el ide
-  //Recorrer el objeto.strIngredient${}
-  //si strIngredient$ tiene algun valor cuentaIngredientes+1
-  //si no, retunr cuentaIngredientes
+function obtenerNumeroIngredientes(meal) {
+  //Recibir Meal
+  //Recorrer el objeto Meal
+  let ingredientsCounter = 0;
+  for (let key in meal) {
+    const content = meal[key]
+    if (key.indexOf('Ingredient') >= 0 && content) {
+      ingredientsCounter++;
+    }
+  }
+  console.log("🔪 Termina de llenar ingredientes...");
+  return ingredientsCounter;
+}
+
+function createCards() {
+  let resultCards = ""
+  sugerenciasArray.forEach(item => {
+    resultCards = resultCards.concat(`
+    <div class="sugerencia">
+      <h3 class="nameMeal1">${item.nameMeal}</h3>
+        <div class="ingredientes">
+          <p class="numeroIngredientes1">${item.noIngredientes}</p>
+          <p>Ingredientes</p>
+        </div>
+    </div>
+    `)
+  });
+  sugContainer.innerHTML = resultCards;
+}
+
+function crearCardSugerencia (nMeal, nIngredientes){
+  const sugContainer = document.querySelector('.sugContainer');
+
+  const sugerencia = document.createElement('div');
+  sugerencia.className = 'sugerencia';
+  
+  const nameMeal = document.createElement('h3');
+  nameMeal.className = 'nameMeal';
+
+  const ingredientes = document.createElement('div');
+  ingredientes.className = 'ingredientes';
+
+  const numeroIngredientes = document.createElement('p');
+  numeroIngredientes.className = 'numeroIngredientes';
+
+  const p = document.createElement('p');
+
+  sugContainer.appendChild(sugerencia);
+  sugerencia.appendChild(nameMeal);
+  sugerencia.appendChild(ingredientes);
+  ingredientes.appendChild(numeroIngredientes);
+  ingredientes.appendChild(p);
+
+  document.querySelector(".nameMeal").textContent = nMeal;
+  document.querySelector("p").textContent = nIngredientes;
 }
