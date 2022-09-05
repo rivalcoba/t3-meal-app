@@ -76,7 +76,7 @@ function createCards() {
   let resultCards = ""
   sugerenciasArray.forEach(item => {
     resultCards = resultCards.concat(`
-    <section class="recipe-item">
+    <section class="recipe-item" onclick='window.location.href="/ingredients.html?s=${item.nameMeal}"'>
       <!-- Tarjeta de receta en galeria de resultados -->
       <div id="mealCard" class="card">
         <div id="mealThumbnail" class="imgCard">
