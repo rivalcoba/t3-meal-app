@@ -5,6 +5,13 @@ import loading from '../assets/img/loading.gif'
 let searchRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/search.php';
 const randomRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'
 
+// Input Search reference
+const inputSearch = document.getElementById("input-search");
+
+document.getElementById("search-button").addEventListener("click", () => {
+   window.location.href = `/results.html?s=${inputSearch.value}`; 
+});
+
 // Getting interface references
 const recipeTitle = document.getElementById("recipe-title");
 const ingredientsList = document.getElementById("ingredients-list")
@@ -19,7 +26,7 @@ searchRecipeUrl = search && search.search("s") > 0 ? searchRecipeUrl + search : 
 
 getRecipe(axios, searchRecipeUrl).then(recipe => {
   // Escribiendo Titulo
-  recipeTitle.innerHTML = `🌟 ${recipe.strMeal} 🌟`;
+  recipeTitle.innerHTML = recipe.strMeal;
 
   // Asignando imagen
   recipeThumbnail.src = recipe.strMealThumb;
@@ -40,7 +47,7 @@ getRecipe(axios, searchRecipeUrl).then(recipe => {
   let listItems = "";
 
   ingredients.forEach((ingredient, index)=>{
-    listItems += `<li>${measures[index]} ${ingredient}</li></br>`
+    listItems += `<li>${measures[index]} ${ingredient}</li>`
   });
 
   // Escribiendo lista de ingredientes

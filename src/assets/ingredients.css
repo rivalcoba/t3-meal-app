@@ -4,32 +4,59 @@
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: rgb(247, 240, 223);
+  background: #F5EFD7;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Alata', 'Arial';
 }
 
 h1{
-  font-size: medium;
-  color: rgb(51, 58, 31);
+  font-size: 5rem;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  color: #CB803A;
 }
 
 h2{
-  font-size: small;
-  padding: 1rem;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+}
+
+#ingredients-section {
+  /* width: 100%; */
+}
+
+#ingredients-section h2 {
+  margin-bottom: 10px;
 }
 
 ul{
   display: flex;
   flex-flow: column wrap;
-  height: 11.9rem;
+  height: 18rem;
+  gap: .5rem 5rem;
+  margin-left: 15px;
 }
 
 ul > li {
-  font-size: x-small;
+  font-size: 1.5rem;
   float: left;
   clear: left;
   list-style: none;
-  padding-right: 6%;
+}
+
+ul li::before {
+  content: "\2022";
+  color: rgba(203, 128, 58, .8);
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em; 
 }
 
 header {
@@ -64,20 +91,33 @@ header button:hover{
   background: #d89c64;
 }
 
+.container {
+  max-width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
 section.header {
   display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
 section.header > div {
   padding: 1%;
 }
 
 img {
-  height: 15rem;
+  max-height: 400px;
   border-radius: 5%;
+  box-shadow: 5px 5px rgba(203, 128, 58, .5);
 }
 
 hr.solid {
-  border-top: 3px solid #bbb;
+  border: 1px solid rgba(203, 128, 58, .5);
+  width: 100%;
+  margin: 5px 0 15px 0;
 }
 
 .random-button > button{
@@ -94,6 +134,15 @@ header > div{
   background-color: red;
 }
 
+#directions-section {
+  font-size: 1.5rem;
+}
+
+#directions-section h2 {
+  padding-left: 1rem;
+}
+
 section#directions-section p {
   padding: 1rem;
+  line-height: 22px;
 }
