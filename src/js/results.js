@@ -3,6 +3,8 @@ import pandaImage from "../assets/img/panda.svg";
 import rectangleImage from "../assets/img/rectangle9.svg";
 console.log("results JS 🤘");
 
+let recipe = "";
+
 // Panda Image
 const panda = document.querySelector("#pandaImage");
 panda.src = pandaImage;
@@ -29,11 +31,15 @@ randomButton.addEventListener("mouseover", () => {
   // Gets new recipe every time the mouse is over randomButton
   getRandomRecipe().then(function (data) {
     console.log(data);
-    const name = getRecipeName(data);
+    recipe = getRecipeName(data);
 
-    randomRecipeName.textContent = name;
+    randomRecipeName.textContent = recipe;
   });
 });
+
+randomButton.addEventListener("click", ()=>{
+  window.location.href=`/ingredients.html?s=${recipe}`
+ });
 
 // API Helper Functions
 function getRandomRecipe() {
