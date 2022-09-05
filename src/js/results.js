@@ -9,6 +9,10 @@ let sugContainer = document.querySelector(".container");
 let terminoBusqueda;
 let sugerenciasArray = [];
 
+// Verificando si hay busqueda en query
+let search = window.location.search ? window.location.search.split("=")[1] : "";
+traerSugerencias();
+
 stringSearch.addEventListener("input", function leerBusqueda(event) {
   terminoBusqueda = event.target.value;
   imprimirSugerencia(terminoBusqueda);
@@ -101,9 +105,15 @@ function createCards() {
 }
 
 function traerSugerencias(terminoBusqueda) {
-  fetch(
-    `https://www.themealdb.com/api/json/v1/1/search.php?s=${terminoBusqueda}`
-  )
+  
+  let fetchUrl = terminoBusqueda ?
+    `https://www.themealdb.com/api/json/v1/1/search.php?s=${terminoBusqueda}` :
+    search === "" ?
+      'https://www.themealdb.com/api/json/v1/1/random.php' :
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`;
+  console.log(fetchUrl);
+
+  fetch(fetchUrl)
     .then((response) => response.json())
     .then((data) => {
       limpiarArray();
