@@ -19,7 +19,7 @@ searchRecipeUrl = search && search.search("s") > 0 ? searchRecipeUrl + search : 
 
 getRecipe(axios, searchRecipeUrl).then(recipe => {
   // Escribiendo Titulo
-  recipeTitle.innerHTML = `🌟 ${recipe.strMeal} 🌟`;
+  recipeTitle.innerHTML = recipe.strMeal;
 
   // Asignando imagen
   recipeThumbnail.src = recipe.strMealThumb;
@@ -40,7 +40,7 @@ getRecipe(axios, searchRecipeUrl).then(recipe => {
   let listItems = "";
 
   ingredients.forEach((ingredient, index)=>{
-    listItems += `<li>${measures[index]} ${ingredient}</li></br>`
+    listItems += `<li>${measures[index]} ${ingredient}</li>`
   });
 
   // Escribiendo lista de ingredientes

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:wght@600&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
@@ -14,7 +17,8 @@
     <button><span class="material-icons md-24">search</span></button>
     <button onclick="window.location.href='/ingredients.html'"><span class="material-icons md-24">shuffle</span></button>
   </header>
-  <section class="header">
+  
+  <section class="header container">
     <div id="image-section">
       <img id="recipe-thumbnail" src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" alt="Minuatura">
     </div>
@@ -27,12 +31,13 @@
         </ul>
       </div>
     </div>
+
+    <section id="directions-section">
+      <h2>DIRECTIONS</h2>
+      <p id="directions-paragraph"></p>
+    </section>
   </section>
-  <section id="directions-section">
-    <h2>DIRECTIONS</h2>
-    <p id="directions-paragraph">
-    </p>
-  </section>
+
   <!-- Import Axios -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
